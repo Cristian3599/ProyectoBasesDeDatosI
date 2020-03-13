@@ -1,0 +1,146 @@
+create table Paciente (
+			cedula number(9,0),
+			nombre varchar(20),
+			apellido varchar(20),
+			telefono varchar(15), 
+			Direccion varchar(15),
+			TipoPaciente varchar(15),
+			constraint cedula_pk primary key (cedula) );
+
+
+create table Clinica (
+		      CodClinica  varchar(15),
+		      NomClinica varchar(15),
+                      constraint CodClinica_pk primary key (CodClinica)  )
+
+
+create table Sucursal (
+		      CodSucursal  varchar(15),
+		      CodClinica  varchar(15), 
+		      Telefono  number(10,0),
+                      constraint CodSucursar_pk primary key (CodSucursal),
+                      constraint CodClinica_FK foreign key (CodClinica) references Clinica (CodClinica) )
+
+
+create table Consultorio ( 
+		      CodConsultorio  varchar(15),
+		      CodSucursal  varchar(15), 
+                      constraint CodConsultorio_pk primary key (CodConsultorio),
+                      constraint CodSucursal_FK foreign key (CodSucursal) references Sucursal (CodSucursal) )
+
+create table Equipamiento ( 
+		      CodSerial  varchar(15),
+		      CodConsultorio  varchar(15),
+                      Tipo varchar(15),
+                      fechaMantenimient date, 
+                      constraint CodSerial_pk primary key (CodSerial),
+                      constraint CodConsultorio_FK foreign key (CodConsultorio) references Consultorio 		      (CodConsultorio) )
+
+create table Odontologo (
+		     CodOdontologo varchar(15),
+                     NomOdontologo varchar(15),
+                     ApeOdontologo varchar(15),
+                     Especialidad varchar(15),
+                     constraint CodOdontologo_pk primary key (CodOdontologo) )
+
+create table ConsultorioXOdontologo ( 
+		     CodOdontologo varchar(15),
+                     CodConsultorio varchar(15),
+                     constraint ConsultorioxOdontontologo_PK primary key (CodOdontologo, CodConsultorio),
+                     Constraint CodOdontologo_FK foreign key (CodOdontologo) references Odontologo  (CodOdontologo),
+                     Constraint CodigoConsultorio_FK foreign key (CodConsultorio) references Consultorio  		     (CodConsultorio)   )
+
+create table Horario ( 
+	             Fecha date,
+		     HoraInicio date,
+		     HoraFin date, 
+		     CodOdontologo varchar(15),
+                     constraint Fecha_PK primary key (Fecha),
+                     Constraint CodigoOdontologo_FK foreign key (CodOdontologo) references Odontologo  		     (CodOdontologo) )
+
+create table Disponibilidad ( 
+		     Estado varchar(15),
+                     Fecha date,
+                     CodOdontologo varchar(15),
+                     constraint disponibilidad_PK primary key (Estado, Fecha, CodOdontologo),
+                     Constraint COdontologo_FK foreign key (CodOdontologo) references Odontologo  (CodOdontologo),
+                     Constraint Fecha_FK foreign key (Fecha) references Horario  (Fecha) )
+
+create table Reserva ( 
+		     CodReserva varchar(15),
+		     Estado varchar(15),
+		     saldoTotal number(10,0),
+		     Abono number(10,0),
+		     Fecha date,
+		     Cedula number(10,0),
+                     constraint CodReserva_PK primary key (CodReserva),
+                     Constraint FechaDis_FK foreign key (Fecha) references Horario  (Fecha),
+                     Constraint Cedula_FK foreign key (Cedula) references Paciente  (Cedula) )
+
+create table ServicioXReserva ( 
+		     CodServicio varchar(15),
+		     CodReserva Varchar(15),
+                     constraint ServicioXReserva_PK primary key (CodServicio, CodReserva),
+                     Constraint CodServicio_FK foreign key (CodServicio) references Servicio  (CodServicio),
+                     Constraint CodReserva_FK foreign key (CodReserva) references Reserva  (CodReserva) )
+
+insert  into   Clinica values ('clinica100', 'Salud Oral')
+
+insert  into  Sucursal  values ('Sucursal200', 'clinica100', 'Calle 23 #56-23', 4678593)
+insert  into  Sucursal  values ('Sucursal201', 'clinica100', 'Calle 23 #22-55', 4675589)
+insert  into  Sucursal  values ('Sucursal202', 'clinica100', 'Calle 67#42-56', 4454589)
+
+###insert  into  Consultorio  values ('Consultorio300', 'sucursal200')
+insert  into  Consultorio  values ('Consultorio301', 'Sucursal200')
+insert  into  Consultorio  values ('Consultorio302', 'Sucursal200')
+insert  into  Consultorio  values ('Consultorio303', 'Sucursal201')
+insert  into  Consultorio  values ('Consultorio304', 'Sucursal201')
+insert  into  Consultorio  values ('Consultorio305', 'Sucursal202')
+insert  into  Consultorio  values ('Consultorio306', 'Sucursal202')
+
+insert  into  Equipamiento values ('Equipamiento411', 'Consultorio306', 'Espejo', '02/06/2020')
+insert  into  Equipamiento values ('Equipamiento410', 'Consultorio306', 'Taladro', '02/06/2020')
+insert  into  Equipamiento values ('Equipamiento409', 'Consultorio305', 'Taladro', '30/05/2020')
+insert  into  Equipamiento values ('Equipamiento408', 'Consultorio305', 'Espejo', '30/05/2020')
+insert  into  Equipamiento values ('Equipamiento407', 'Consultorio304', 'Espejo', '12/05/2020')
+
+###insert  into  Equipamiento values ('Equipamiento406', 'Consultorio304', 'Espejo', '12/05/2020')
+
+insert  into  Equipamiento values ('Equipamiento405', 'Consultorio303', 'Espejo', '25/04/2020')
+insert  into  Equipamiento values ('Equipamiento404', 'Consultorio303', 'Taladro', '25/04/2020')
+insert  into  Equipamiento values ('Equipamiento403', 'Consultorio302', 'Espejo', '01/04/2020')
+insert  into  Equipamiento values ('Equipamiento402', 'Consultorio302', 'Taladro', '01/04/2020')
+insert  into  Equipamiento values ('Equipamiento401', 'Consultorio301', 'Espejo', '20/03/2020')
+insert  into  Equipamiento values ('Equipamiento400', 'Consultorio301', 'Taladro', '20/03/2020')
+
+insert into paciente values ('100467893','Juan','Gonzales','8934567','Calle 69 # 23-89','Subsidiado')
+insert into paciente values ('1045345678','Liliana','Osorio','8903458','Calle 12 # 56-02','subsidiado')
+INSERT INTO Paciente  VALUES ('167508436','Camilo', 'Ordoñez ','4577841','calle 72 #33-15','subsidiado');
+INSERT INTO Paciente  VALUES ('166303036','Nicolas', 'Cardenaz ','7916413','calle 11 #17-22','contributivo');
+INSERT INTO Paciente  VALUES ('166303036930','Nicolas', 'Cardenaz ','7916413','calle 11 #17-22','contributivo');
+insert into paciente values ('23456789','Alberto','Lopez','8863478','Calle 34 # 56-90','contributivo')
+
+insert into horario values (TO_DATE('13/03/2020 08:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16430229 7769')
+insert into horario values (TO_DATE('13/03/2020 08:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16430229 7769')
+insert into horario values (TO_DATE('13/03/2020 09:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16430229 7769')
+
+alter table horario add constraint hora_ck check (
+    (to_number(to_char(fecha,'HH24'))) >= (to_number(to_char(horainicio,'HH24'))) and
+    (to_number(to_char(fecha,'HH24'))) < (to_number(to_char(horafin,'HH24')))
+)
+
+alter table horario add constraint minutos_ck check ((to_number(to_char(fecha,'MI'))) = 0 or (to_number(to_char(fecha,'MI'))) = 30)
+
+insert into disponibilidad values ('Disponible',TO_DATE('13/03/2020 08:00:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
+insert into disponibilidad values ('Disponible',TO_DATE('13/03/2020 08:30:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
+
+insert into consultorioxodontologo values ('Consultorio300','16010917 0621')
+insert into consultorioxodontologo values ('Consultorio301','16080102 2724')
+insert into consultorioxodontologo values ('Consultorio301','16240502 9139')
+insert into consultorioxodontologo values ('Consultorio302','16270208 8275')
+insert into consultorioxodontologo values ('Consultorio303','16300127 5647')
+
+insert into servicio values ('501','endodoncia',3500,'Tratamiento de conductos')
+insert into servicio values ('502','Cirugia oral',5000,'Extraccion de dientes y otros procedimientos')
+insert into servicio values ('503','Ortodoncia',7000,'Tratamiento de las anomalias dentales')
+insert into servicio values ('503','Ortodoncia',7000,'Tratamiento de las anomalias dentales')
