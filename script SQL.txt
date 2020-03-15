@@ -55,16 +55,15 @@ create table Horario (
 		     HoraInicio date,
 		     HoraFin date, 
 		     CodOdontologo varchar(15),
-                     constraint Fecha_PK primary key (Fecha),
-                     Constraint CodigoOdontologo_FK foreign key (CodOdontologo) references Odontologo  		     (CodOdontologo) )
+                     constraint Fecha_PK primary key (Fecha, CodOdontologo),
+                     Constraint CodigoOdontologo_FK foreign key (CodOdontologo) references Odontologo ) 		     (CodOdontologo) )
 
 create table Disponibilidad ( 
-		     Estado varchar(15),
                      Fecha date,
                      CodOdontologo varchar(15),
-                     constraint disponibilidad_PK primary key (Estado, Fecha, CodOdontologo),
+                     constraint disponibilidad_PK primary key (Fecha, CodOdontologo),
                      Constraint COdontologo_FK foreign key (CodOdontologo) references Odontologo  (CodOdontologo),
-                     Constraint Fecha_FK foreign key (Fecha) references Horario  (Fecha) )
+                     Constraint Horario_FK foreign key (Fecha, CodOdontologo) references Horario  (Fecha, CodOdontologo) )
 
 create table Reserva ( 
 		     CodReserva varchar(15),
@@ -73,9 +72,18 @@ create table Reserva (
 		     Abono number(10,0),
 		     Fecha date,
 		     Cedula number(10,0),
+		     CodOdontologo varchar(15),
                      constraint CodReserva_PK primary key (CodReserva),
-                     Constraint FechaDis_FK foreign key (Fecha) references Horario  (Fecha),
+                     Constraint FechaDis_FK foreign key (Fecha, CodOdontologo ) references Disponibilidad (Fecha, CodOdontologo),
                      Constraint Cedula_FK foreign key (Cedula) references Paciente  (Cedula) )
+
+create table servicio (
+codservicio varchar2(15),
+nomservicio varchar2(20),
+costo number(12,0),
+descripcion varchar2(50),
+constraint servicio_pk primary key (codservicio)
+)
 
 create table ServicioXReserva ( 
 		     CodServicio varchar(15),
@@ -123,6 +131,10 @@ insert into paciente values ('23456789','Alberto','Lopez','8863478','Calle 34 # 
 insert into horario values (TO_DATE('13/03/2020 08:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16430229 7769')
 insert into horario values (TO_DATE('13/03/2020 08:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16430229 7769')
 insert into horario values (TO_DATE('13/03/2020 09:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16430229 7769')
+insert into horario values (TO_DATE('13/03/2020 07:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16270208 8275')
+insert into horario values (TO_DATE('13/03/2020 14:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16270208 8275')
+insert into horario values (TO_DATE('13/03/2020 10:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16450711 4769')
+insert into horario values (TO_DATE('15/03/2020 11:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16931028 7389')
 
 alter table horario add constraint hora_ck check (
     (to_number(to_char(fecha,'HH24'))) >= (to_number(to_char(horainicio,'HH24'))) and
@@ -131,8 +143,13 @@ alter table horario add constraint hora_ck check (
 
 alter table horario add constraint minutos_ck check ((to_number(to_char(fecha,'MI'))) = 0 or (to_number(to_char(fecha,'MI'))) = 30)
 
-insert into disponibilidad values ('Disponible',TO_DATE('13/03/2020 08:00:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
-insert into disponibilidad values ('Disponible',TO_DATE('13/03/2020 08:30:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
+insert into disponibilidad values (TO_DATE('13/03/2020 08:00:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
+insert into disponibilidad values (TO_DATE('13/03/2020 08:30:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
+insert into disponibilidad values (TO_DATE('13/03/2020 09:00:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
+insert into disponibilidad values (TO_DATE('13/03/2020 07:30:00','DD/MM/YYYY HH24:MI:SS'),'16270208 8275')
+insert into disponibilidad values (TO_DATE('13/03/2020 14:00:00','DD/MM/YYYY HH24:MI:SS'),'16270208 8275')
+insert into disponibilidad values (TO_DATE('13/03/2020 10:00:00','DD/MM/YYYY HH24:MI:SS'),'16450711 4769')
+insert into disponibilidad values (TO_DATE('15/03/2020 11:30:00','DD/MM/YYYY HH24:MI:SS'),'16931028 7389')
 
 insert into consultorioxodontologo values ('Consultorio300','16010917 0621')
 insert into consultorioxodontologo values ('Consultorio301','16080102 2724')
@@ -140,7 +157,17 @@ insert into consultorioxodontologo values ('Consultorio301','16240502 9139')
 insert into consultorioxodontologo values ('Consultorio302','16270208 8275')
 insert into consultorioxodontologo values ('Consultorio303','16300127 5647')
 
-insert into servicio values ('501','endodoncia',3500,'Tratamiento de conductos')
+insert into servicio values ('501','Endodoncia',3500,'Tratamiento de conductos')
 insert into servicio values ('502','Cirugia oral',5000,'Extraccion de dientes y otros procedimientos')
 insert into servicio values ('503','Ortodoncia',7000,'Tratamiento de las anomalias dentales')
-insert into servicio values ('503','Ortodoncia',7000,'Tratamiento de las anomalias dentales')
+insert into servicio values ('504','Patologia Bucal',7000,'Tratamiento de las anomalias dentales')
+
+insert into reserva values ('600','Disponible', 2500, TO_DATE('13/03/2020 08:00:00','DD/MM/YYYY HH24:MI:SS'),100467893,'16430229 7769')
+insert into reserva values ('601','Cancelada', 0, TO_DATE('13/03/2020 09:00:00','DD/MM/YYYY HH24:MI:SS'),167508436,'16430229 7769')
+insert into reserva values ('602','Disponible', 3000, TO_DATE('13/03/2020 08:30:00','DD/MM/YYYY HH24:MI:SS'),100467893,'16430229 7769')
+insert into reserva values ('603','No se Presento', 0, TO_DATE('13/03/2020 07:30:00','DD/MM/YYYY HH24:MI:SS'),23456789,'16270208 8275')
+insert into reserva values ('604','Se Presento', 4000, TO_DATE('13/03/2020 10:00:00','DD/MM/YYYY HH24:MI:SS'),166303036930,'16450711 4769')
+
+insert into servicioxreserva values ('502','600')
+insert into servicioxreserva values ('503','602')
+insert into servicioxreserva values ('504','604')
