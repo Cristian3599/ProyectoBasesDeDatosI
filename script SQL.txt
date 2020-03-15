@@ -18,6 +18,7 @@ create table Sucursal (
 		      CodSucursal  varchar(15),
 		      CodClinica  varchar(15), 
 		      Telefono  number(10,0),
+		      Direccion varchar(15),
                       constraint CodSucursar_pk primary key (CodSucursal),
                       constraint CodClinica_FK foreign key (CodClinica) references Clinica (CodClinica) )
 
@@ -44,11 +45,11 @@ create table Odontologo (
                      constraint CodOdontologo_pk primary key (CodOdontologo) )
 
 create table ConsultorioXOdontologo ( 
-		     CodOdontologo varchar(15),
                      CodConsultorio varchar(15),
+		     CodOdontologo varchar(15),
                      constraint ConsultorioxOdontontologo_PK primary key (CodOdontologo, CodConsultorio),
                      Constraint CodOdontologo_FK foreign key (CodOdontologo) references Odontologo  (CodOdontologo),
-                     Constraint CodigoConsultorio_FK foreign key (CodConsultorio) references Consultorio  		     (CodConsultorio)   )
+                     Constraint CodigoConsultorio_FK foreign key (CodConsultorio) references Consultorio (CodConsultorio)   )
 
 create table Horario ( 
 	             Fecha date,
@@ -91,13 +92,14 @@ create table ServicioXReserva (
                      Constraint CodServicio_FK foreign key (CodServicio) references Servicio  (CodServicio),
                      Constraint CodReserva_FK foreign key (CodReserva) references Reserva  (CodReserva) )
 
+
 insert  into   Clinica values ('clinica100', 'Salud Oral')
 
 insert  into  Sucursal  values ('Sucursal200', 'clinica100', 'Calle 23 #56-23', 4678593)
 insert  into  Sucursal  values ('Sucursal201', 'clinica100', 'Calle 23 #22-55', 4675589)
 insert  into  Sucursal  values ('Sucursal202', 'clinica100', 'Calle 67#42-56', 4454589)
 
-###insert  into  Consultorio  values ('Consultorio300', 'sucursal200')
+insert  into  Consultorio  values ('Consultorio300', 'Sucursal200')
 insert  into  Consultorio  values ('Consultorio301', 'Sucursal200')
 insert  into  Consultorio  values ('Consultorio302', 'Sucursal200')
 insert  into  Consultorio  values ('Consultorio303', 'Sucursal201')
@@ -110,9 +112,6 @@ insert  into  Equipamiento values ('Equipamiento410', 'Consultorio306', 'Taladro
 insert  into  Equipamiento values ('Equipamiento409', 'Consultorio305', 'Taladro', '30/05/2020')
 insert  into  Equipamiento values ('Equipamiento408', 'Consultorio305', 'Espejo', '30/05/2020')
 insert  into  Equipamiento values ('Equipamiento407', 'Consultorio304', 'Espejo', '12/05/2020')
-
-###insert  into  Equipamiento values ('Equipamiento406', 'Consultorio304', 'Espejo', '12/05/2020')
-
 insert  into  Equipamiento values ('Equipamiento405', 'Consultorio303', 'Espejo', '25/04/2020')
 insert  into  Equipamiento values ('Equipamiento404', 'Consultorio303', 'Taladro', '25/04/2020')
 insert  into  Equipamiento values ('Equipamiento403', 'Consultorio302', 'Espejo', '01/04/2020')
@@ -120,20 +119,123 @@ insert  into  Equipamiento values ('Equipamiento402', 'Consultorio302', 'Taladro
 insert  into  Equipamiento values ('Equipamiento401', 'Consultorio301', 'Espejo', '20/03/2020')
 insert  into  Equipamiento values ('Equipamiento400', 'Consultorio301', 'Taladro', '20/03/2020')
 
-insert into paciente values ('100467893','Juan','Gonzales','8934567','Calle 69 # 23-89','Subsidiado')
-insert into paciente values ('1045345678','Liliana','Osorio','8903458','Calle 12 # 56-02','subsidiado')
-INSERT INTO Paciente  VALUES ('167508436','Camilo', 'Ordoñez ','4577841','calle 72 #33-15','subsidiado');
-INSERT INTO Paciente  VALUES ('166303036','Nicolas', 'Cardenaz ','7916413','calle 11 #17-22','contributivo');
-INSERT INTO Paciente  VALUES ('166303036930','Nicolas', 'Cardenaz ','7916413','calle 11 #17-22','contributivo');
-insert into paciente values ('23456789','Alberto','Lopez','8863478','Calle 34 # 56-90','contributivo')
-
+insert into horario values (TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16430229 7769')
+insert into horario values (TO_DATE('13/03/2020 07:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16430229 7769')
 insert into horario values (TO_DATE('13/03/2020 08:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16430229 7769')
 insert into horario values (TO_DATE('13/03/2020 08:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16430229 7769')
 insert into horario values (TO_DATE('13/03/2020 09:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16430229 7769')
+insert into horario values (TO_DATE('13/03/2020 09:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16430229 7769')
+insert into horario values (TO_DATE('13/03/2020 10:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16430229 7769')
+insert into horario values (TO_DATE('13/03/2020 10:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16430229 7769')
+insert into horario values (TO_DATE('13/03/2020 11:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16430229 7769')
+insert into horario values (TO_DATE('13/03/2020 11:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16430229 7769')
+insert into horario values (TO_DATE('13/03/2020 13:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16430229 7769')
+insert into horario values (TO_DATE('13/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16430229 7769')
+insert into horario values (TO_DATE('13/03/2020 14:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16430229 7769')
+insert into horario values (TO_DATE('13/03/2020 14:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16430229 7769')
+
+insert into horario values (TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16270208 8275')
 insert into horario values (TO_DATE('13/03/2020 07:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16270208 8275')
+insert into horario values (TO_DATE('13/03/2020 08:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16270208 8275')
+insert into horario values (TO_DATE('13/03/2020 08:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16270208 8275')
+insert into horario values (TO_DATE('13/03/2020 09:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16270208 8275')
+insert into horario values (TO_DATE('13/03/2020 09:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16270208 8275')
+insert into horario values (TO_DATE('13/03/2020 10:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16270208 8275')
+insert into horario values (TO_DATE('13/03/2020 10:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16270208 8275')
+insert into horario values (TO_DATE('13/03/2020 11:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16270208 8275')
+insert into horario values (TO_DATE('13/03/2020 11:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16270208 8275')
+insert into horario values (TO_DATE('13/03/2020 13:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16270208 8275')
+insert into horario values (TO_DATE('13/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16270208 8275')
 insert into horario values (TO_DATE('13/03/2020 14:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16270208 8275')
+insert into horario values (TO_DATE('13/03/2020 14:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16270208 8275')
+
+insert into horario values (TO_DATE('13/03/2020 7:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16450711 4769')
+insert into horario values (TO_DATE('13/03/2020 7:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16450711 4769')
+insert into horario values (TO_DATE('13/03/2020 8:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16450711 4769')
+insert into horario values (TO_DATE('13/03/2020 8:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16450711 4769')
+insert into horario values (TO_DATE('13/03/2020 9:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16450711 4769')
+insert into horario values (TO_DATE('13/03/2020 9:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16450711 4769')
 insert into horario values (TO_DATE('13/03/2020 10:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16450711 4769')
+insert into horario values (TO_DATE('13/03/2020 10:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16450711 4769')
+insert into horario values (TO_DATE('13/03/2020 11:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16450711 4769')
+insert into horario values (TO_DATE('13/03/2020 11:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16450711 4769')
+insert into horario values (TO_DATE('13/03/2020 13:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16450711 4769')
+insert into horario values (TO_DATE('13/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16450711 4769')
+insert into horario values (TO_DATE('13/03/2020 14:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16450711 4769')
+insert into horario values (TO_DATE('13/03/2020 14:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('13/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16450711 4769')
+
+insert into horario values (TO_DATE('15/03/2020 7:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16931028 7389')
+insert into horario values (TO_DATE('15/03/2020 7:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16931028 7389')
+insert into horario values (TO_DATE('15/03/2020 8:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16931028 7389')
+insert into horario values (TO_DATE('15/03/2020 8:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16931028 7389')
+insert into horario values (TO_DATE('15/03/2020 9:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16931028 7389')
+insert into horario values (TO_DATE('15/03/2020 9:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16931028 7389')
+insert into horario values (TO_DATE('15/03/2020 10:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16931028 7389')
+insert into horario values (TO_DATE('15/03/2020 10:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16931028 7389')
+insert into horario values (TO_DATE('15/03/2020 11:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16931028 7389')
 insert into horario values (TO_DATE('15/03/2020 11:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16931028 7389')
+insert into horario values (TO_DATE('15/03/2020 13:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16931028 7389')
+insert into horario values (TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16931028 7389')
+insert into horario values (TO_DATE('15/03/2020 14:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16931028 7389')
+insert into horario values (TO_DATE('15/03/2020 14:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16931028 7389')
+
+insert into horario values (TO_DATE('15/03/2020 7:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16010917 0621')
+insert into horario values (TO_DATE('15/03/2020 7:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16010917 0621')
+insert into horario values (TO_DATE('15/03/2020 8:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16010917 0621')
+insert into horario values (TO_DATE('15/03/2020 8:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16010917 0621')
+insert into horario values (TO_DATE('15/03/2020 9:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16010917 0621')
+insert into horario values (TO_DATE('15/03/2020 9:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16010917 0621')
+insert into horario values (TO_DATE('15/03/2020 10:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16010917 0621')
+insert into horario values (TO_DATE('15/03/2020 10:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16010917 0621')
+insert into horario values (TO_DATE('15/03/2020 11:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16010917 0621')
+insert into horario values (TO_DATE('15/03/2020 11:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16010917 0621')
+insert into horario values (TO_DATE('15/03/2020 13:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16010917 0621')
+insert into horario values (TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16010917 0621')
+insert into horario values (TO_DATE('15/03/2020 14:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16010917 0621')
+insert into horario values (TO_DATE('15/03/2020 14:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16010917 0621')
+
+insert into horario values (TO_DATE('15/03/2020 7:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16240502 9139')
+insert into horario values (TO_DATE('15/03/2020 7:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16240502 9139')
+insert into horario values (TO_DATE('15/03/2020 8:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16240502 9139')
+insert into horario values (TO_DATE('15/03/2020 8:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16240502 9139')
+insert into horario values (TO_DATE('15/03/2020 9:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16240502 9139')
+insert into horario values (TO_DATE('15/03/2020 10:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16240502 9139')
+insert into horario values (TO_DATE('15/03/2020 10:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16240502 9139')
+insert into horario values (TO_DATE('15/03/2020 11:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16240502 9139')
+insert into horario values (TO_DATE('15/03/2020 11:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16240502 9139')
+insert into horario values (TO_DATE('15/03/2020 13:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16240502 9139')
+insert into horario values (TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16240502 9139')
+insert into horario values (TO_DATE('15/03/2020 14:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16240502 9139')
+insert into horario values (TO_DATE('15/03/2020 14:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16240502 9139')
+
+insert into horario values (TO_DATE('15/03/2020 7:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16080102 2724')
+insert into horario values (TO_DATE('15/03/2020 7:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16080102 2724')
+insert into horario values (TO_DATE('15/03/2020 8:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16080102 2724')
+insert into horario values (TO_DATE('15/03/2020 8:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16080102 2724')
+insert into horario values (TO_DATE('15/03/2020 9:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16080102 2724')
+insert into horario values (TO_DATE('15/03/2020 9:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16080102 2724')
+insert into horario values (TO_DATE('15/03/2020 10:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16080102 2724')
+insert into horario values (TO_DATE('15/03/2020 10:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16080102 2724')
+insert into horario values (TO_DATE('15/03/2020 11:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16080102 2724')
+insert into horario values (TO_DATE('15/03/2020 11:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16080102 2724')
+insert into horario values (TO_DATE('15/03/2020 13:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16080102 2724')
+insert into horario values (TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16080102 2724')
+insert into horario values (TO_DATE('15/03/2020 14:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16080102 2724')
+insert into horario values (TO_DATE('15/03/2020 14:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('15/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16080102 2724')
+
+insert into horario values (TO_DATE('16/03/2020 7:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16300127 5647')
+insert into horario values (TO_DATE('16/03/2020 7:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16300127 5647')
+insert into horario values (TO_DATE('16/03/2020 8:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16300127 5647')
+insert into horario values (TO_DATE('16/03/2020 8:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16300127 5647')
+insert into horario values (TO_DATE('16/03/2020 9:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16300127 5647')
+insert into horario values (TO_DATE('16/03/2020 9:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16300127 5647')
+insert into horario values (TO_DATE('16/03/2020 10:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16300127 5647')
+insert into horario values (TO_DATE('16/03/2020 10:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16300127 5647')
+insert into horario values (TO_DATE('16/03/2020 11:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16300127 5647')
+insert into horario values (TO_DATE('16/03/2020 11:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16300127 5647')
+insert into horario values (TO_DATE('16/03/2020 13:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16300127 5647')
+insert into horario values (TO_DATE('16/03/2020 14:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16300127 5647')
+insert into horario values (TO_DATE('16/03/2020 14:30:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'), TO_DATE('16/03/2020 15:00:00','DD/MM/YYYY HH24:MI:SS'), '16300127 5647')
 
 alter table horario add constraint hora_ck check (
     (to_number(to_char(fecha,'HH24'))) >= (to_number(to_char(horainicio,'HH24'))) and
@@ -142,30 +244,215 @@ alter table horario add constraint hora_ck check (
 
 alter table horario add constraint minutos_ck check ((to_number(to_char(fecha,'MI'))) = 0 or (to_number(to_char(fecha,'MI'))) = 30)
 
+INSERT INTO Odontologo  VALUES ('16450711 4769','Jameson','Blackwell',' Patologia Bucal');
+INSERT INTO Odontologo  VALUES ('16931028 7389','Rina','Brooks',' Ortodoncia ');
+INSERT INTO Odontologo  VALUES ('16240502 9139','Logan','Rodriquez',' Ortodoncia ');
+INSERT INTO Odontologo  VALUES ('16010917 0621','Vincent','Brady',' Ortodoncia ');
+INSERT INTO Odontologo  VALUES ('16770322 4217','Harrison','Jacobs',' Cariologia ');
+INSERT INTO Odontologo  VALUES ('16430229 7769','Dustin','Maxwell',' Ortodoncia ');
+INSERT INTO Odontologo  VALUES ('16270208 8275','Mikayla','Cash','Endodoncia ');
+INSERT INTO Odontologo  VALUES ('16080102 2724','Nina','Guerrero',' Cariologia ');
+INSERT INTO Odontologo  VALUES ('16300127 5647','Chester','Finch',' Patologia Bucal ');
+INSERT INTO Odontologo  VALUES ('16490925 5210','Brynne','Washington',' Ortodoncia ');
+INSERT INTO Odontologo  VALUES ('16440930 5218','Nayda','Pickett','Endodoncia ');
+INSERT INTO Odontologo  VALUES ('16700716 4085','Cameran','Mckinney',' Cariologia ');
+INSERT INTO Odontologo  VALUES ('16180114 3866','Quinn','Gillespie',' Cariologia ');
+INSERT INTO Odontologo  VALUES ('16870408 2919','Talon','Richardson',' Patologia Bucal ');
+INSERT INTO Odontologo  VALUES ('16000801 0597','Josiah','King',' Patologia Bucal ');
+INSERT INTO Odontologo  VALUES ('16881219 6304','Yvonne','Hampton',' Patologia Bucal ');
+INSERT INTO Odontologo  VALUES ('16040713 7017','Shad','Bonner',' Cirujia Maxilofacial');
+INSERT INTO Odontologo  VALUES ('16671111 0715','Byron','Phillips','Cirujia Maxilofacial');
+INSERT INTO Odontologo  VALUES ('16000812 1030','Mallory','Moreno',' Ortodoncia ');
+
+insert into disponibilidad values (TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
+insert into disponibilidad values (TO_DATE('13/03/2020 07:30:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
 insert into disponibilidad values (TO_DATE('13/03/2020 08:00:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
 insert into disponibilidad values (TO_DATE('13/03/2020 08:30:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
 insert into disponibilidad values (TO_DATE('13/03/2020 09:00:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
+insert into disponibilidad values (TO_DATE('13/03/2020 09:30:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
+insert into disponibilidad values (TO_DATE('13/03/2020 10:00:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
+insert into disponibilidad values (TO_DATE('13/03/2020 10:30:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
+insert into disponibilidad values (TO_DATE('13/03/2020 11:00:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
+insert into disponibilidad values (TO_DATE('13/03/2020 11:30:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
+insert into disponibilidad values (TO_DATE('13/03/2020 13:00:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
+insert into disponibilidad values (TO_DATE('13/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
+insert into disponibilidad values (TO_DATE('13/03/2020 14:00:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
+insert into disponibilidad values (TO_DATE('13/03/2020 14:30:00','DD/MM/YYYY HH24:MI:SS'),'16430229 7769')
+
+insert into disponibilidad values (TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'),'16270208 8275')
 insert into disponibilidad values (TO_DATE('13/03/2020 07:30:00','DD/MM/YYYY HH24:MI:SS'),'16270208 8275')
+insert into disponibilidad values (TO_DATE('13/03/2020 08:00:00','DD/MM/YYYY HH24:MI:SS'),'16270208 8275')
+insert into disponibilidad values (TO_DATE('13/03/2020 08:30:00','DD/MM/YYYY HH24:MI:SS'),'16270208 8275')
+insert into disponibilidad values (TO_DATE('13/03/2020 09:00:00','DD/MM/YYYY HH24:MI:SS'),'16270208 8275')
+insert into disponibilidad values (TO_DATE('13/03/2020 09:30:00','DD/MM/YYYY HH24:MI:SS'),'16270208 8275')
+insert into disponibilidad values (TO_DATE('13/03/2020 10:00:00','DD/MM/YYYY HH24:MI:SS'),'16270208 8275')
+insert into disponibilidad values (TO_DATE('13/03/2020 10:30:00','DD/MM/YYYY HH24:MI:SS'),'16270208 8275')
+insert into disponibilidad values (TO_DATE('13/03/2020 11:00:00','DD/MM/YYYY HH24:MI:SS'),'16270208 8275')
+insert into disponibilidad values (TO_DATE('13/03/2020 11:30:00','DD/MM/YYYY HH24:MI:SS'),'16270208 8275')
+insert into disponibilidad values (TO_DATE('13/03/2020 13:00:00','DD/MM/YYYY HH24:MI:SS'),'16270208 8275')
+insert into disponibilidad values (TO_DATE('13/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),'16270208 8275')
 insert into disponibilidad values (TO_DATE('13/03/2020 14:00:00','DD/MM/YYYY HH24:MI:SS'),'16270208 8275')
+insert into disponibilidad values (TO_DATE('13/03/2020 14:30:00','DD/MM/YYYY HH24:MI:SS'),'16270208 8275')
+
+insert into disponibilidad values (TO_DATE('13/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'),'16450711 4769')
+insert into disponibilidad values (TO_DATE('13/03/2020 07:30:00','DD/MM/YYYY HH24:MI:SS'),'16450711 4769')
+insert into disponibilidad values (TO_DATE('13/03/2020 08:00:00','DD/MM/YYYY HH24:MI:SS'),'16450711 4769')
+insert into disponibilidad values (TO_DATE('13/03/2020 08:30:00','DD/MM/YYYY HH24:MI:SS'),'16450711 4769')
+insert into disponibilidad values (TO_DATE('13/03/2020 09:00:00','DD/MM/YYYY HH24:MI:SS'),'16450711 4769')
+insert into disponibilidad values (TO_DATE('13/03/2020 09:30:00','DD/MM/YYYY HH24:MI:SS'),'16450711 4769')
 insert into disponibilidad values (TO_DATE('13/03/2020 10:00:00','DD/MM/YYYY HH24:MI:SS'),'16450711 4769')
+insert into disponibilidad values (TO_DATE('13/03/2020 10:30:00','DD/MM/YYYY HH24:MI:SS'),'16450711 4769')
+insert into disponibilidad values (TO_DATE('13/03/2020 11:00:00','DD/MM/YYYY HH24:MI:SS'),'16450711 4769')
+insert into disponibilidad values (TO_DATE('13/03/2020 11:30:00','DD/MM/YYYY HH24:MI:SS'),'16450711 4769')
+insert into disponibilidad values (TO_DATE('13/03/2020 13:00:00','DD/MM/YYYY HH24:MI:SS'),'16450711 4769')
+insert into disponibilidad values (TO_DATE('13/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),'16450711 4769')
+insert into disponibilidad values (TO_DATE('13/03/2020 14:00:00','DD/MM/YYYY HH24:MI:SS'),'16450711 4769')
+insert into disponibilidad values (TO_DATE('13/03/2020 14:30:00','DD/MM/YYYY HH24:MI:SS'),'16450711 4769')
+
+insert into disponibilidad values (TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'),'16931028 7389')
+insert into disponibilidad values (TO_DATE('15/03/2020 07:30:00','DD/MM/YYYY HH24:MI:SS'),'16931028 7389')
+insert into disponibilidad values (TO_DATE('15/03/2020 08:00:00','DD/MM/YYYY HH24:MI:SS'),'16931028 7389')
+insert into disponibilidad values (TO_DATE('15/03/2020 08:30:00','DD/MM/YYYY HH24:MI:SS'),'16931028 7389')
+insert into disponibilidad values (TO_DATE('15/03/2020 09:00:00','DD/MM/YYYY HH24:MI:SS'),'16931028 7389')
+insert into disponibilidad values (TO_DATE('15/03/2020 09:30:00','DD/MM/YYYY HH24:MI:SS'),'16931028 7389')
+insert into disponibilidad values (TO_DATE('15/03/2020 10:00:00','DD/MM/YYYY HH24:MI:SS'),'16931028 7389')
+insert into disponibilidad values (TO_DATE('15/03/2020 10:30:00','DD/MM/YYYY HH24:MI:SS'),'16931028 7389')
+insert into disponibilidad values (TO_DATE('15/03/2020 11:00:00','DD/MM/YYYY HH24:MI:SS'),'16931028 7389')
 insert into disponibilidad values (TO_DATE('15/03/2020 11:30:00','DD/MM/YYYY HH24:MI:SS'),'16931028 7389')
+insert into disponibilidad values (TO_DATE('15/03/2020 13:00:00','DD/MM/YYYY HH24:MI:SS'),'16931028 7389')
+insert into disponibilidad values (TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),'16931028 7389')
+insert into disponibilidad values (TO_DATE('15/03/2020 14:00:00','DD/MM/YYYY HH24:MI:SS'),'16931028 7389')
+insert into disponibilidad values (TO_DATE('15/03/2020 14:30:00','DD/MM/YYYY HH24:MI:SS'),'16931028 7389')
+
+insert into disponibilidad values (TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'),'16010917 0621')
+insert into disponibilidad values (TO_DATE('15/03/2020 07:30:00','DD/MM/YYYY HH24:MI:SS'),'16010917 0621')
+insert into disponibilidad values (TO_DATE('15/03/2020 08:00:00','DD/MM/YYYY HH24:MI:SS'),'16010917 0621')
+insert into disponibilidad values (TO_DATE('15/03/2020 08:30:00','DD/MM/YYYY HH24:MI:SS'),'16010917 0621')
+insert into disponibilidad values (TO_DATE('15/03/2020 09:00:00','DD/MM/YYYY HH24:MI:SS'),'16010917 0621')
+insert into disponibilidad values (TO_DATE('15/03/2020 09:30:00','DD/MM/YYYY HH24:MI:SS'),'16010917 0621')
+insert into disponibilidad values (TO_DATE('15/03/2020 10:00:00','DD/MM/YYYY HH24:MI:SS'),'16010917 0621')
+insert into disponibilidad values (TO_DATE('15/03/2020 10:30:00','DD/MM/YYYY HH24:MI:SS'),'16010917 0621')
+insert into disponibilidad values (TO_DATE('15/03/2020 11:00:00','DD/MM/YYYY HH24:MI:SS'),'16010917 0621')
+insert into disponibilidad values (TO_DATE('15/03/2020 11:30:00','DD/MM/YYYY HH24:MI:SS'),'16010917 0621')
+insert into disponibilidad values (TO_DATE('15/03/2020 13:00:00','DD/MM/YYYY HH24:MI:SS'),'16010917 0621')
+insert into disponibilidad values (TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),'16010917 0621')
+insert into disponibilidad values (TO_DATE('15/03/2020 14:00:00','DD/MM/YYYY HH24:MI:SS'),'16010917 0621')
+insert into disponibilidad values (TO_DATE('15/03/2020 14:30:00','DD/MM/YYYY HH24:MI:SS'),'16010917 0621')
+
+insert into disponibilidad values (TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'),'16240502 9139')
+insert into disponibilidad values (TO_DATE('15/03/2020 07:30:00','DD/MM/YYYY HH24:MI:SS'),'16240502 9139')
+insert into disponibilidad values (TO_DATE('15/03/2020 08:00:00','DD/MM/YYYY HH24:MI:SS'),'16240502 9139')
+insert into disponibilidad values (TO_DATE('15/03/2020 08:30:00','DD/MM/YYYY HH24:MI:SS'),'16240502 9139')
+insert into disponibilidad values (TO_DATE('15/03/2020 09:00:00','DD/MM/YYYY HH24:MI:SS'),'16240502 9139')
+insert into disponibilidad values (TO_DATE('15/03/2020 09:30:00','DD/MM/YYYY HH24:MI:SS'),'16240502 9139')
+insert into disponibilidad values (TO_DATE('15/03/2020 10:00:00','DD/MM/YYYY HH24:MI:SS'),'16240502 9139')
+insert into disponibilidad values (TO_DATE('15/03/2020 10:30:00','DD/MM/YYYY HH24:MI:SS'),'16240502 9139')
+insert into disponibilidad values (TO_DATE('15/03/2020 11:00:00','DD/MM/YYYY HH24:MI:SS'),'16240502 9139')
+insert into disponibilidad values (TO_DATE('15/03/2020 11:30:00','DD/MM/YYYY HH24:MI:SS'),'16240502 9139')
+insert into disponibilidad values (TO_DATE('15/03/2020 13:00:00','DD/MM/YYYY HH24:MI:SS'),'16240502 9139')
+insert into disponibilidad values (TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),'16240502 9139')
+insert into disponibilidad values (TO_DATE('15/03/2020 14:00:00','DD/MM/YYYY HH24:MI:SS'),'16240502 9139')
+insert into disponibilidad values (TO_DATE('15/03/2020 14:30:00','DD/MM/YYYY HH24:MI:SS'),'16240502 9139')
+
+insert into disponibilidad values (TO_DATE('15/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'),'16080102 2724')
+insert into disponibilidad values (TO_DATE('15/03/2020 07:30:00','DD/MM/YYYY HH24:MI:SS'),'16080102 2724')
+insert into disponibilidad values (TO_DATE('15/03/2020 08:00:00','DD/MM/YYYY HH24:MI:SS'),'16080102 2724')
+insert into disponibilidad values (TO_DATE('15/03/2020 08:30:00','DD/MM/YYYY HH24:MI:SS'),'16080102 2724')
+insert into disponibilidad values (TO_DATE('15/03/2020 09:00:00','DD/MM/YYYY HH24:MI:SS'),'16080102 2724')
+insert into disponibilidad values (TO_DATE('15/03/2020 09:30:00','DD/MM/YYYY HH24:MI:SS'),'16080102 2724')
+insert into disponibilidad values (TO_DATE('15/03/2020 10:00:00','DD/MM/YYYY HH24:MI:SS'),'16080102 2724')
+insert into disponibilidad values (TO_DATE('15/03/2020 10:30:00','DD/MM/YYYY HH24:MI:SS'),'16080102 2724')
+insert into disponibilidad values (TO_DATE('15/03/2020 11:00:00','DD/MM/YYYY HH24:MI:SS'),'16080102 2724')
+insert into disponibilidad values (TO_DATE('15/03/2020 11:30:00','DD/MM/YYYY HH24:MI:SS'),'16080102 2724')
+insert into disponibilidad values (TO_DATE('15/03/2020 13:00:00','DD/MM/YYYY HH24:MI:SS'),'16080102 2724')
+insert into disponibilidad values (TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),'16080102 2724')
+insert into disponibilidad values (TO_DATE('15/03/2020 14:00:00','DD/MM/YYYY HH24:MI:SS'),'16080102 2724')
+insert into disponibilidad values (TO_DATE('15/03/2020 14:30:00','DD/MM/YYYY HH24:MI:SS'),'16080102 2724')
+
+insert into disponibilidad values (TO_DATE('16/03/2020 07:00:00','DD/MM/YYYY HH24:MI:SS'),'16300127 5647')
+insert into disponibilidad values (TO_DATE('16/03/2020 07:30:00','DD/MM/YYYY HH24:MI:SS'),'16300127 5647')
+insert into disponibilidad values (TO_DATE('16/03/2020 08:00:00','DD/MM/YYYY HH24:MI:SS'),'16300127 5647')
+insert into disponibilidad values (TO_DATE('16/03/2020 08:30:00','DD/MM/YYYY HH24:MI:SS'),'16300127 5647')
+insert into disponibilidad values (TO_DATE('16/03/2020 09:00:00','DD/MM/YYYY HH24:MI:SS'),'16300127 5647')
+insert into disponibilidad values (TO_DATE('16/03/2020 09:30:00','DD/MM/YYYY HH24:MI:SS'),'16300127 5647')
+insert into disponibilidad values (TO_DATE('16/03/2020 10:00:00','DD/MM/YYYY HH24:MI:SS'),'16300127 5647')
+insert into disponibilidad values (TO_DATE('16/03/2020 10:30:00','DD/MM/YYYY HH24:MI:SS'),'16300127 5647')
+insert into disponibilidad values (TO_DATE('16/03/2020 11:00:00','DD/MM/YYYY HH24:MI:SS'),'16300127 5647')
+insert into disponibilidad values (TO_DATE('16/03/2020 11:30:00','DD/MM/YYYY HH24:MI:SS'),'16300127 5647')
+insert into disponibilidad values (TO_DATE('16/03/2020 13:00:00','DD/MM/YYYY HH24:MI:SS'),'16300127 5647')
+insert into disponibilidad values (TO_DATE('16/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),'16300127 5647')
+insert into disponibilidad values (TO_DATE('16/03/2020 14:00:00','DD/MM/YYYY HH24:MI:SS'),'16300127 5647')
+insert into disponibilidad values (TO_DATE('16/03/2020 14:30:00','DD/MM/YYYY HH24:MI:SS'),'16300127 5647')
+
+
 
 insert into consultorioxodontologo values ('Consultorio300','16010917 0621')
 insert into consultorioxodontologo values ('Consultorio301','16080102 2724')
 insert into consultorioxodontologo values ('Consultorio301','16240502 9139')
 insert into consultorioxodontologo values ('Consultorio302','16270208 8275')
 insert into consultorioxodontologo values ('Consultorio303','16300127 5647')
+insert into consultorioxodontologo values ('Consultorio304','16430229 7769')
+insert into consultorioxodontologo values ('Consultorio305','16450711 4769')
+insert into consultorioxodontologo values ('Consultorio306','16931028 7389')
 
 insert into servicio values ('501','Endodoncia',3500,'Tratamiento de conductos')
 insert into servicio values ('502','Cirugia oral',5000,'Extraccion de dientes y otros procedimientos')
 insert into servicio values ('503','Ortodoncia',7000,'Tratamiento de las anomalias dentales')
 insert into servicio values ('504','Patologia Bucal',7000,'Tratamiento de las anomalias dentales')
 
-insert into reserva values ('600','Disponible', 2500, TO_DATE('13/03/2020 08:00:00','DD/MM/YYYY HH24:MI:SS'),100467893,'16430229 7769')
+
+insert into paciente values ('100467893','Juan','Gonzales','8934567','Calle 69 # 23-89','Subsidiado')
+insert into paciente values ('1045345678','Liliana','Osorio','8903458','Calle 12 # 56-02','subsidiado')
+INSERT INTO Paciente  VALUES ('167508436','Camilo', 'Ordoñez ','4577841','calle 72 #33-15','subsidiado');
+INSERT INTO Paciente  VALUES ('166303036','Nicolas', 'Cardenaz ','7916413','calle 11 #17-22','contributivo');
+insert into paciente values ('23456789','Alberto','Lopez','8863478','Calle 34 # 56-90','contributivo');
+INSERT INTO Paciente  VALUES ('166303036930','Nicolas', 'Cardenaz ','7916413','calle 11 #17-22','contributivo');
+INSERT INTO Paciente  VALUES ('267506086','Carlos', 'Muñoz','	4539842','calle 17 #10-8','subsidiado');
+
+INSERT INTO Paciente  VALUES ('2870746483','Rosita', 'Alarcon','4566642','calle 56 #16-88','Contributivo');
+INSERT INTO Paciente  VALUES ('3843943043','Natalia', 'Rios','4457642','calle 23 #16-8','subsidiado');
+INSERT INTO Paciente  VALUES ('2234585599','Valentina', 'Palacios','4428573','calle 13 #15-18','contributivo');
+INSERT INTO Paciente  VALUES ('5492394323','Miller', 'Muñoz','4447744','calle 67 #16-38','contributivo');
+INSERT INTO Paciente  VALUES ('7434937984','Oswaldo', 'Palacios','4232434','calle 34 #11-18','contributivo');
+INSERT INTO Paciente  VALUES ('8843434332','Jenny', 'Gomez','2483823','calle 23 #7-99','contributivo');
+INSERT INTO Paciente  VALUES ('1284842340','Manuela', 'Garcia','4873823','calle 12 #16-38','subsidiado');
+INSERT INTO Paciente  VALUES ('3293287498','Adriana', 'Marin','4671271','calle 13 #41-25','subsidiado');
+INSERT INTO Paciente  VALUES ('1283843333','Cristiano', 'Ronaldo','4123232','calle 61 #11-18','contributivo');
+INSERT INTO Paciente  VALUES ('3943439439','Santiago', 'Ospina','3232322','calle 67 #14-19','subsidiado');
+INSERT INTO Paciente  VALUES ('4428328342','James', 'Rodriguez','4992323','calle 65 #11-5','subsidiado');
+INSERT INTO Paciente  VALUES ('3348388923','Lonel', 'Messi','4442322','calle 1 #6-3','subsidiado');
+INSERT INTO Paciente  VALUES ('8737478392','Graciela', 'Muñoz','4223323','calle 38 #1-1','contributivo');
+INSERT INTO Paciente  VALUES ('2232349439','Camila', 'Benavides','4232423','calle 33 #14-21','contributivo');
+INSERT INTO Paciente  VALUES ('1212394334','Oivar', 'Micolta','5663232','calle 12 #12-12','subsidiado');
+
+insert into reserva values ('600','Se Presento', 2500, TO_DATE('13/03/2020 08:00:00','DD/MM/YYYY HH24:MI:SS'),100467893,'16430229 7769')
 insert into reserva values ('601','Cancelada', 0, TO_DATE('13/03/2020 09:00:00','DD/MM/YYYY HH24:MI:SS'),167508436,'16430229 7769')
-insert into reserva values ('602','Disponible', 3000, TO_DATE('13/03/2020 08:30:00','DD/MM/YYYY HH24:MI:SS'),100467893,'16430229 7769')
+insert into reserva values ('602','Se Presento', 3000, TO_DATE('13/03/2020 08:30:00','DD/MM/YYYY HH24:MI:SS'),100467893,'16430229 7769')
 insert into reserva values ('603','No se Presento', 0, TO_DATE('13/03/2020 07:30:00','DD/MM/YYYY HH24:MI:SS'),23456789,'16270208 8275')
 insert into reserva values ('604','Se Presento', 4000, TO_DATE('13/03/2020 10:00:00','DD/MM/YYYY HH24:MI:SS'),166303036930,'16450711 4769')
+
+
+insert into reserva values ('605','Se Presento', 50000, TO_DATE('13/03/2020 09:00:00','DD/MM/YYYY HH24:MI:SS'),267506086,'16430229 7769')
+insert into reserva values ('606','Se Presento', 60000, TO_DATE('15/03/2020 09:00:00','DD/MM/YYYY HH24:MI:SS'),166303036,'16010917 0621')
+insert into reserva values ('607','Candelada', 70000, TO_DATE('16/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),2870746483,'16300127 5647')
+insert into reserva values ('608','Se Presento', 70000, TO_DATE('16/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),3843943043,'16300127 5647')
+
+insert into reserva values ('609','Candelada', 70000, TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),2870746483,'16300127 5647')
+insert into reserva values ('610','Candelada', 70000, TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),2870746483,'16300127 5647')
+insert into reserva values ('611','Candelada', 70000, TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),2870746483,'16300127 5647')
+insert into reserva values ('612','Candelada', 70000, TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),2870746483,'16300127 5647')
+insert into reserva values ('613','Candelada', 70000, TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),2870746483,'16300127 5647')
+insert into reserva values ('614','Candelada', 70000, TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),2870746483,'16300127 5647')
+insert into reserva values ('615','Candelada', 70000, TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),2870746483,'16300127 5647')
+insert into reserva values ('616','Candelada', 70000, TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),2870746483,'16300127 5647')
+insert into reserva values ('617','Candelada', 70000, TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),2870746483,'16300127 5647')
+insert into reserva values ('618','Candelada', 70000, TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),2870746483,'16300127 5647')
+insert into reserva values ('619','Candelada', 70000, TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),2870746483,'16300127 5647')
+insert into reserva values ('620','Candelada', 70000, TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),2870746483,'16300127 5647')
+insert into reserva values ('621','Candelada', 70000, TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),2870746483,'16300127 5647')
+insert into reserva values ('622','Candelada', 70000, TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),2870746483,'16300127 5647')
+insert into reserva values ('623','Candelada', 70000, TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),2870746483,'16300127 5647')
+insert into reserva values ('624','Candelada', 70000, TO_DATE('15/03/2020 13:30:00','DD/MM/YYYY HH24:MI:SS'),2870746483,'16300127 5647')
 
 insert into servicioxreserva values ('502','600')
 insert into servicioxreserva values ('503','602')
