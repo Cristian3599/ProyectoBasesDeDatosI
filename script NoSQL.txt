@@ -1,0 +1,450 @@
+db.consultorio.insert(
+    [   
+        {
+        codconsultorio: 'Consultorio301',
+        sucursal: {
+            codsucursal: 'Sucursal200',
+            dirsucursal: 'Calle 23 #56-23',
+            telefono: 4678593,
+            clinica: {
+                codclinica: 'Clinica100',
+                nomclinica: 'Salud Oral'
+            }
+        },
+        equipamientos: [
+            {
+                serial: 'Equipamiento400',
+                tipo: 'Taladro',
+                fechamantenimiento: ISODate('2020-03-20T00:00:00')
+            }, 
+            {
+                serial: 'Equipamiento401',
+                tipo: 'Espejo',
+                fechamantenimiento: ISODate('2020-03-20T00:00:00')
+            } 
+        ]
+        
+        },
+        {
+        codconsultorio: 'Consultorio302',
+        sucursal: {
+            codsucursal: 'Sucursal200',
+            dirsucursal: 'Calle 23 #56-23',
+            telefono: 4678593,
+            clinica: {
+                codclinica: 'Clinica100',
+                nomclinica: 'Salud Oral'
+            }
+        },
+        equipamientos: [
+            {
+                serial: 'Equipamiento402',
+                tipo: 'Taladro',
+                fechamantenimiento: ISODate('2020-04-01T00:00:00')
+            }, 
+            {
+                serial: 'Equipamiento403',
+                tipo: 'Espejo',
+                fechamantenimiento: ISODate('2020-04-01T00:00:00')
+            } 
+        ]
+        
+        },
+        {
+        codconsultorio: 'Consultorio303',
+        sucursal: {
+            codsucursal: 'Sucursal201',
+            dirsucursal: 'Calle 23 #22-55',
+            telefono: 4675589,
+            clinica: {
+                codclinica: 'Clinica100',
+                nomclinica: 'Salud Oral'
+            }
+        },
+        equipamientos: [
+            {
+                serial: 'Equipamiento404',
+                tipo: 'Taladro',
+                fechamantenimiento: ISODate('2020-04-25T00:00:00')
+            }, 
+            {
+                serial: 'Equipamiento405',
+                tipo: 'Espejo',
+                fechamantenimiento: ISODate('2020-04-25T00:00:00')
+            } 
+        ]
+        
+        }, 
+        {
+        codconsultorio: 'Consultorio304',
+        sucursal: {
+            codsucursal: 'Sucursal201',
+            dirsucursal: 'Calle 23 #22-55',
+            telefono: 4675589,
+            clinica: {
+                codclinica: 'Clinica100',
+                nomclinica: 'Salud Oral'
+            }
+        },
+        equipamientos: [
+            {
+                serial: 'Equipamiento406',
+                tipo: 'Taladro',
+                fechamantenimiento: ISODate('2020-05-12T00:00:00')
+            }, 
+            {
+                serial: 'Equipamiento407',
+                tipo: 'Espejo',
+                fechamantenimiento: ISODate('2020-05-12T00:00:00')
+            } 
+        ]
+        
+        }, 
+        {
+        codconsultorio: 'Consultorio305',
+        sucursal: {
+            codsucursal: 'Sucursal202',
+            dirsucursal: 'Calle 67#42-56',
+            telefono: 4454589,
+            clinica: {
+                codclinica: 'Clinica100',
+                nomclinica: 'Salud Oral'
+            }
+        },
+        equipamientos: [
+            {
+                serial: 'Equipamiento408',
+                tipo: 'Espejo',
+                fechamantenimiento: ISODate('2020-05-30T00:00:00')
+            }, 
+            {
+                serial: 'Equipamiento409',
+                tipo: 'Taladro',
+                fechamantenimiento: ISODate('2020-05-30T00:00:00')
+            } 
+        ]
+        
+        },
+        {
+        codconsultorio: 'Consultorio306',
+        sucursal: {
+            codsucursal: 'Sucursal202',
+            dirsucursal: 'Calle 67#42-56',
+            telefono: 4454589,
+            clinica: {
+                codclinica: 'Clinica100',
+                nomclinica: 'Salud Oral'
+            }
+        },
+        equipamientos: [
+            {
+                serial: 'Equipamiento410',
+                tipo: 'Taladro',
+                fechamantenimiento: ISODate('2020-06-02T00:00:00')
+            }, 
+            {
+                serial: 'Equipamiento411',
+                tipo: 'Espejo',
+                fechamantenimiento: ISODate('2020-06-02T00:00:00')
+            } 
+        ]
+        
+        }
+    ]    
+)
+
+db.odontologo.insert( 
+    [
+        {
+            cododontologo: '16240502 9139',
+            nomodontologo: 'Logan',
+            apeodontologo: 'Rodriquez',
+            especialidad: 'Ortodoncia',
+            horarios: []
+        }, 
+        {
+            cododontologo: '16430229 7769',
+            nomodontologo: 'Logan',
+            apeodontologo: 'Rodriquez',
+            especialidad: 'Ortodoncia',
+            horarios: [
+                {
+                    fecha: ISODate('2020-03-13T08:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                }, 
+                {
+                    fecha: ISODate('2020-03-13T08:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T09:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                }
+            ]
+        },
+        {
+            cododontologo: '16270208 8275',
+            nomodontologo: 'Mikayla	',
+            apeodontologo: 'Cash',
+            especialidad: 'Endodoncia',
+            horarios: [
+                {
+                    fecha: ISODate('2020-03-13T07:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                }, 
+                {
+                    fecha: ISODate('2020-03-13T14:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                }    
+            ]
+        }, 
+        {
+            cododontologo: '16080102 2724',
+            nomodontologo: 'Nina',
+            apeodontologo: 'Guerrero',
+            especialidad: 'Cariologia',
+            horarios: []
+        },
+        {
+            cododontologo: '16300127 5647',
+            nomodontologo: 'Chester',
+            apeodontologo: 'Finch',
+            especialidad: 'Patologia Bucal',
+            horarios: []
+        },
+        {
+            cododontologo: '16450711 4769',
+            nomodontologo: 'Jameson',
+            apeodontologo: 'Blackwell',
+            especialidad: 'Patologia Bucal',
+            horarios: [
+                {
+                    fecha: ISODate('2020-03-13T08:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },  
+                {
+                    fecha: ISODate('2020-03-13T10:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                }      
+            ]
+        },
+        {
+            cododontologo: '16490925 5210',
+            nomodontologo: 'Brynne',
+            apeodontologo: 'Washington',
+            especialidad: 'Ortodoncia',
+            horarios: []
+        },
+        {
+            cododontologo: '16931028 7389',
+            nomodontologo: 'Rina',
+            apeodontologo: 'Brooks',
+            especialidad: 'Ortodoncia',
+            horarios: [
+                {
+                    fecha: ISODate('2020-03-15T11:30:00'),
+                    horainicio: ISODate('2020-03-15T07:00:00'),
+                    horafin: ISODate('2020-03-15T15:00:00')
+                }    
+            ]
+        },
+        {
+            cododontologo: '16010917 0621',
+            nomodontologo: 'Vincent',
+            apeodontologo: 'Brady',
+            especialidad: 'Ortodoncia',
+            horarios: []
+        }
+    ]    
+)
+
+db.consultorioxodontologo.insert(
+    [
+        {
+            codconsultorio: 'Consultorio300',
+            cododontologo: '16010917 0621'
+        }, 
+        {
+            codconsultorio: 'Consultorio301',
+            cododontologo: '16080102 2724'
+        },
+        {
+            codconsultorio: 'Consultorio301',
+            cododontologo: '16240502 9139'
+        },
+        {
+            codconsultorio: 'Consultorio302',
+            cododontologo: '16270208 8275'
+        },
+        {
+            codconsultorio: 'Consultorio303',
+            cododontologo: '16300127 5647'
+        }
+    ]    
+)
+
+db.disponibilidad.insert(
+    [
+        {
+            fecha: ISODate('2020-03-13T08:00:00'),
+            cododontologo: '16430229 7769'
+        },
+        {
+            fecha: ISODate('2020-03-13T08:30:00'),
+            cododontologo: '16430229 7769'
+        },
+        {
+            fecha: ISODate('2020-03-13T09:00:00'),
+            cododontologo: '16430229 7769'
+        },
+        {
+            fecha: ISODate('2020-03-13T07:30:00'),
+            cododontologo: '16270208 8275'
+        },
+        {
+            fecha: ISODate('2020-03-13T14:00:00'),
+            cododontologo: '16270208 8275'
+        },
+        {
+            fecha: ISODate('2020-03-13T10:00:00'),
+            cododontologo: '16450711 4769'
+        },
+        {
+            fecha: ISODate('2020-03-15T11:30:00'),
+            cododontologo: '16931028 7389'
+        }
+    ]
+)
+
+db.servicio.insert( 
+    [
+        {
+            codservicio: '501',
+            nomservicio: 'Endodoncia',
+            costo: 3500,
+            descripcion: 'Tratamiento de conductos'
+        },
+        {
+            codservicio: '502',
+            nomservicio: 'Cirugia Oral',
+            costo: 5000,
+            descripcion: 'Extraccion de dientes y otros procedimientos'
+        },
+        {
+            codservicio: '503',
+            nomservicio: 'Ortodoncia',
+            costo: 7000,
+            descripcion: 'Tratamiento de las anomalias dentales'
+        },
+        {
+            codservicio: '504',
+            nomservicio: 'Patologia Bucal',
+            costo: 3500,
+            descripcion: 'Tratamiento de alteraciones y enfermedades orales'
+        }
+    ]    
+)
+
+db.reserva.insert(
+    [
+        {
+            codreserva: '600',
+            estado: 'Disponible',
+            abono: 2500,
+            fecha: ISODate('2020-03-13T08:00:00'),
+            cododontologo: '16430229 7769',
+            paciente: {
+                cedula: 100467893,
+                nombre: 'Juan',
+                apellido: 'Gonzalez',
+                telefono: 8934567,
+                direccion: 'Calle 69 # 23-89',
+                tipo: 'Subsidiado'
+            }
+        }, 
+        {
+            codreserva: '601',
+            estado: 'Cancelada',
+            abono: 0,
+            fecha: ISODate('2020-03-13T09:00:00'),
+            cododontologo: '16430229 7769',
+            paciente: {
+                cedula: 167508436,
+                nombre: 'Camilo',
+                apellido: 'Ordoñez',
+                telefono: 4577841,
+                direccion: 'calle 72 #33-15',
+                tipo: 'Subsidiado'
+            }
+        },
+        {
+            codreserva: '602',
+            estado: 'Disponible',
+            abono: 3000,
+            fecha: ISODate('2020-03-13T08:30:00'),
+            cododontologo: '16430229 7769',
+            paciente: {
+                cedula: 100467893,
+                nombre: 'Juan',
+                apellido: 'Gonzales',
+                telefono: 8934567,
+                direccion: 'Calle 69 # 23-89',
+                tipo: 'Subsidiado'
+            }
+        },
+        {
+            codreserva: '603',
+            estado: 'No se presento',
+            abono: 0,
+            fecha: ISODate('2020-03-13T07:30:00'),
+            cododontologo: '16270208 8275',
+            paciente: {
+                cedula: 23456789,
+                nombre: 'Alberto',
+                apellido: 'Lopez',
+                telefono: 8863478,
+                direccion: 'Calle 34 # 56-90',
+                tipo: 'Contributivo'
+            }
+        },
+        {
+            codreserva: '604',
+            estado: 'Se Presento',
+            abono: 0,
+            fecha: ISODate('2020-03-13T10:00:00'),
+            cododontologo: '16450711 4769',
+            paciente: {
+                cedula: 166303036930,
+                nombre: 'Nicolas',
+                apellido: 'Cardenaz',
+                telefono: 7916413,
+                direccion: 'calle 11 #17-22',
+                tipo: 'Contributivo'
+            }
+        }
+    ]    
+)
+
+db.servicioxreserva.insert(
+    [
+        {
+            codservicio: '502',
+            codreserva: '600'
+        }, 
+        {
+            codservicio: '503',
+            codreserva: '602'
+        }, 
+        {
+            codservicio: '504',
+            codreserva: '604'
+        } 
+    ]    
+)
