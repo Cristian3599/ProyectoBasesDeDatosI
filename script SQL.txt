@@ -78,12 +78,11 @@ create table Reserva (
                      Constraint Cedula_FK foreign key (Cedula) references Paciente  (Cedula) )
 
 create table servicio (
-codservicio varchar2(15),
-nomservicio varchar2(20),
-costo number(12,0),
-descripcion varchar2(50),
-constraint servicio_pk primary key (codservicio)
-)
+			codservicio varchar2(15),
+			nomservicio varchar2(20),
+			costo number(12,0),
+			descripcion varchar2(50),
+			constraint servicio_pk primary key (codservicio))
 
 create table ServicioXReserva ( 
 		     CodServicio varchar(15),
