@@ -1821,11 +1821,99 @@ db.servicioxreserva.insert(
         }, 
         {
             codservicio: '503',
-            codreserva: '602'
+            codreserva: '601'
         }, 
         {
             codservicio: '504',
+            codreserva: '602'
+        },
+	{
+            codservicio: '502',
+            codreserva: '603'
+        },
+	{
+            codservicio: '503',
             codreserva: '604'
-        } 
+        },
+	{
+            codservicio: '504',
+            codreserva: '605'
+        },
+	{
+            codservicio: '502',
+            codreserva: '606'
+        },
+	{
+            codservicio: '501',
+            codreserva: '607'
+        },
+	{
+            codservicio: '502',
+            codreserva: '608'
+        },
+	{
+            codservicio: '503',
+            codreserva: '609'
+        },
+	{
+            codservicio: '503',
+            codreserva: '610'
+        },
+	{
+            codservicio: '501',
+            codreserva: '611'
+        },
+	{
+            codservicio: '502',
+            codreserva: '612'
+        },
+	{
+            codservicio: '503',
+            codreserva: '613'
+        },
+	{
+            codservicio: '504',
+            codreserva: '614'
+        },
+	{
+            codservicio: '501',
+            codreserva: '615'
+        },
+	{
+            codservicio: '502',
+            codreserva: '616'
+        },
+	{
+            codservicio: '503',
+            codreserva: '617'
+        },
+	{
+            codservicio: '501',
+            codreserva: '618'
+        },
+	{
+            codservicio: '504',
+            codreserva: '619'
+        },
+	{
+            codservicio: '501',
+            codreserva: '620'
+        },
+	{
+            codservicio: '502',
+            codreserva: '621'
+        },
+	{
+            codservicio: '503',
+            codreserva: '622'
+        },
+	{
+            codservicio: '502',
+            codreserva: '623'
+        },
+	{
+            codservicio: '504',
+            codreserva: '624'
+        }
     ]    
 )
