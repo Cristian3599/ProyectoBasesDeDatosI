@@ -160,14 +160,17 @@ db.odontologo.insert(
             nomodontologo: 'Logan',
             apeodontologo: 'Rodriquez',
             especialidad: 'Ortodoncia',
-            horarios: []
-        }, 
-        {
-            cododontologo: '16430229 7769',
-            nomodontologo: 'Logan',
-            apeodontologo: 'Rodriquez',
-            especialidad: 'Ortodoncia',
             horarios: [
+                {
+                    fecha: ISODate('2020-03-13T07:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T07:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
                 {
                     fecha: ISODate('2020-03-13T08:00:00'),
                     horainicio: ISODate('2020-03-13T07:00:00'),
@@ -182,6 +185,149 @@ db.odontologo.insert(
                     fecha: ISODate('2020-03-13T09:00:00'),
                     horainicio: ISODate('2020-03-13T07:00:00'),
                     horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T09:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T10:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T10:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T11:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T11:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T12:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T12:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T13:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T13:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T14:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T14:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                }    
+            ]
+        }, 
+        {
+            cododontologo: '16430229 7769',
+            nomodontologo: 'Logan',
+            apeodontologo: 'Rodriquez',
+            especialidad: 'Ortodoncia',
+            horarios: [
+                {
+                    fecha: ISODate('2020-03-13T07:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T07:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T08:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                }, 
+                {
+                    fecha: ISODate('2020-03-13T08:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T09:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T09:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T10:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T10:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T11:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T11:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T12:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T12:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T13:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T13:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T14:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T14:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
                 }
             ]
         },
@@ -192,12 +338,82 @@ db.odontologo.insert(
             especialidad: 'Endodoncia',
             horarios: [
                 {
+                    fecha: ISODate('2020-03-13T07:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
                     fecha: ISODate('2020-03-13T07:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T08:00:00'),
                     horainicio: ISODate('2020-03-13T07:00:00'),
                     horafin: ISODate('2020-03-13T15:00:00')
                 }, 
                 {
+                    fecha: ISODate('2020-03-13T08:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T09:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T09:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T10:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T10:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T11:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T11:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T12:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T12:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T13:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T13:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
                     fecha: ISODate('2020-03-13T14:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T14:30:00'),
                     horainicio: ISODate('2020-03-13T07:00:00'),
                     horafin: ISODate('2020-03-13T15:00:00')
                 }    
@@ -208,14 +424,176 @@ db.odontologo.insert(
             nomodontologo: 'Nina',
             apeodontologo: 'Guerrero',
             especialidad: 'Cariologia',
-            horarios: []
+            horarios: [
+                {
+                    fecha: ISODate('2020-03-13T07:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T07:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T08:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                }, 
+                {
+                    fecha: ISODate('2020-03-13T08:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T09:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T09:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T10:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T10:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T11:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T11:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T12:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T12:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T13:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T13:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T14:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T14:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                }    
+            ]
         },
         {
             cododontologo: '16300127 5647',
             nomodontologo: 'Chester',
             apeodontologo: 'Finch',
             especialidad: 'Patologia Bucal',
-            horarios: []
+            horarios: [
+                {
+                    fecha: ISODate('2020-03-13T07:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T07:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T08:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                }, 
+                {
+                    fecha: ISODate('2020-03-13T08:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T09:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T09:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T10:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T10:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T11:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T11:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T12:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T12:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T13:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T13:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T14:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T14:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                }    
+            ]
         },
         {
             cododontologo: '16450711 4769',
@@ -224,23 +602,86 @@ db.odontologo.insert(
             especialidad: 'Patologia Bucal',
             horarios: [
                 {
+                    fecha: ISODate('2020-03-13T07:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T07:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
                     fecha: ISODate('2020-03-13T08:00:00'),
                     horainicio: ISODate('2020-03-13T07:00:00'),
                     horafin: ISODate('2020-03-13T15:00:00')
-                },  
+                }, 
+                {
+                    fecha: ISODate('2020-03-13T08:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T09:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T09:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
                 {
                     fecha: ISODate('2020-03-13T10:00:00'),
                     horainicio: ISODate('2020-03-13T07:00:00'),
                     horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T10:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T11:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T11:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T12:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T12:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T13:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T13:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T14:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T14:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
                 }      
             ]
-        },
-        {
-            cododontologo: '16490925 5210',
-            nomodontologo: 'Brynne',
-            apeodontologo: 'Washington',
-            especialidad: 'Ortodoncia',
-            horarios: []
         },
         {
             cododontologo: '16931028 7389',
@@ -249,9 +690,84 @@ db.odontologo.insert(
             especialidad: 'Ortodoncia',
             horarios: [
                 {
-                    fecha: ISODate('2020-03-15T11:30:00'),
-                    horainicio: ISODate('2020-03-15T07:00:00'),
-                    horafin: ISODate('2020-03-15T15:00:00')
+                    fecha: ISODate('2020-03-13T07:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T07:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T08:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                }, 
+                {
+                    fecha: ISODate('2020-03-13T08:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T09:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T09:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T10:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T10:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T11:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T11:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T12:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T12:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T13:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T13:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T14:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T14:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
                 }    
             ]
         },
@@ -260,7 +776,88 @@ db.odontologo.insert(
             nomodontologo: 'Vincent',
             apeodontologo: 'Brady',
             especialidad: 'Ortodoncia',
-            horarios: []
+            horarios: [
+                {
+                    fecha: ISODate('2020-03-13T07:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T07:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T08:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                }, 
+                {
+                    fecha: ISODate('2020-03-13T08:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T09:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T09:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T10:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T10:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T11:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T11:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T12:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T12:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T13:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T13:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T14:00:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                },
+                {
+                    fecha: ISODate('2020-03-13T14:30:00'),
+                    horainicio: ISODate('2020-03-13T07:00:00'),
+                    horafin: ISODate('2020-03-13T15:00:00')
+                }    
+            ]
         }
     ]    
 )
@@ -293,6 +890,14 @@ db.consultorioxodontologo.insert(
 db.disponibilidad.insert(
     [
         {
+            fecha: ISODate('2020-03-13T07:00:00'),
+            cododontologo: '16430229 7769'
+        },
+        {
+            fecha: ISODate('2020-03-13T07:30:00'),
+            cododontologo: '16430229 7769'
+        },
+        {
             fecha: ISODate('2020-03-13T08:00:00'),
             cododontologo: '16430229 7769'
         },
@@ -305,7 +910,103 @@ db.disponibilidad.insert(
             cododontologo: '16430229 7769'
         },
         {
+            fecha: ISODate('2020-03-13T09:30:00'),
+            cododontologo: '16430229 7769'
+        },
+        {
+            fecha: ISODate('2020-03-13T10:00:00'),
+            cododontologo: '16430229 7769'
+        },
+        {
+            fecha: ISODate('2020-03-13T10:30:00'),
+            cododontologo: '16430229 7769'
+        },
+        {
+            fecha: ISODate('2020-03-13T11:30:00'),
+            cododontologo: '16430229 7769'
+        },
+        {
+            fecha: ISODate('2020-03-13T12:00:00'),
+            cododontologo: '16430229 7769'
+        },
+        {
+            fecha: ISODate('2020-03-13T12:30:00'),
+            cododontologo: '16430229 7769'
+        },
+        {
+            fecha: ISODate('2020-03-13T13:00:00'),
+            cododontologo: '16430229 7769'
+        },
+        {
+            fecha: ISODate('2020-03-13T13:30:00'),
+            cododontologo: '16430229 7769'
+        },
+        {
+            fecha: ISODate('2020-03-13T13:30:00'),
+            cododontologo: '16430229 7769'
+        },
+        {
+            fecha: ISODate('2020-03-13T14:00:00'),
+            cododontologo: '16430229 7769'
+        },
+        {
+            fecha: ISODate('2020-03-13T14:30:00'),
+            cododontologo: '16430229 7769'
+        },
+        {
+            fecha: ISODate('2020-03-13T07:00:00'),
+            cododontologo: '16270208 8275'
+        },
+        {
             fecha: ISODate('2020-03-13T07:30:00'),
+            cododontologo: '16270208 8275'
+        },
+        {
+            fecha: ISODate('2020-03-13T08:00:00'),
+            cododontologo: '16270208 8275'
+        },
+        {
+            fecha: ISODate('2020-03-13T08:30:00'),
+            cododontologo: '16270208 8275'
+        },
+        {
+            fecha: ISODate('2020-03-13T09:00:00'),
+            cododontologo: '16270208 8275'
+        },
+        {
+            fecha: ISODate('2020-03-13T09:30:00'),
+            cododontologo: '16270208 8275'
+        },
+        {
+            fecha: ISODate('2020-03-13T10:00:00'),
+            cododontologo: '16270208 8275'
+        },
+        {
+            fecha: ISODate('2020-03-13T10:30:00'),
+            cododontologo: '16270208 8275'
+        },
+        {
+            fecha: ISODate('2020-03-13T11:30:00'),
+            cododontologo: '16270208 8275'
+        },
+        {
+            fecha: ISODate('2020-03-13T12:00:00'),
+            cododontologo: '16270208 8275'
+        },
+        {
+            fecha: ISODate('2020-03-13T12:30:00'),
+            cododontologo: '16270208 8275'
+        },
+        {
+            fecha: ISODate('2020-03-13T13:00:00'),
+            cododontologo: '16270208 8275'
+        },
+        {
+            fecha: ISODate('2020-03-13T13:30:00'),
+            cododontologo: '16270208 8275'
+        },
+        {
+            fecha: ISODate('2020-03-13T13:30:00'),
             cododontologo: '16270208 8275'
         },
         {
@@ -313,13 +1014,393 @@ db.disponibilidad.insert(
             cododontologo: '16270208 8275'
         },
         {
+            fecha: ISODate('2020-03-13T14:30:00'),
+            cododontologo: '16270208 8275'
+        },
+        {
+            fecha: ISODate('2020-03-13T07:00:00'),
+            cododontologo: '16450711 4769'
+        },
+        {
+            fecha: ISODate('2020-03-13T07:30:00'),
+            cododontologo: '16450711 4769'
+        },
+        {
+            fecha: ISODate('2020-03-13T08:00:00'),
+            cododontologo: '16450711 4769'
+        },
+        {
+            fecha: ISODate('2020-03-13T08:30:00'),
+            cododontologo: '16450711 4769'
+        },
+        {
+            fecha: ISODate('2020-03-13T09:00:00'),
+            cododontologo: '16450711 4769'
+        },
+        {
+            fecha: ISODate('2020-03-13T09:30:00'),
+            cododontologo: '16450711 4769'
+        },
+        {
             fecha: ISODate('2020-03-13T10:00:00'),
             cododontologo: '16450711 4769'
         },
         {
+            fecha: ISODate('2020-03-13T10:30:00'),
+            cododontologo: '16450711 4769'
+        },
+        {
+            fecha: ISODate('2020-03-13T11:30:00'),
+            cododontologo: '16450711 4769'
+        },
+        {
+            fecha: ISODate('2020-03-13T12:00:00'),
+            cododontologo: '16450711 4769'
+        },
+        {
+            fecha: ISODate('2020-03-13T12:30:00'),
+            cododontologo: '16450711 4769'
+        },
+        {
+            fecha: ISODate('2020-03-13T13:00:00'),
+            cododontologo: '16450711 4769'
+        },
+        {
+            fecha: ISODate('2020-03-13T13:30:00'),
+            cododontologo: '16450711 4769'
+        },
+        {
+            fecha: ISODate('2020-03-13T13:30:00'),
+            cododontologo: '16450711 4769'
+        },
+        {
+            fecha: ISODate('2020-03-13T14:00:00'),
+            cododontologo: '16450711 4769'
+        },
+        {
+            fecha: ISODate('2020-03-13T14:30:00'),
+            cododontologo: '16450711 4769'
+        },
+        {
+            fecha: ISODate('2020-03-15T07:00:00'),
+            cododontologo: '16931028 7389'
+        },
+        {
+            fecha: ISODate('2020-03-15T07:30:00'),
+            cododontologo: '16931028 7389'
+        },
+        {
+            fecha: ISODate('2020-03-15T08:00:00'),
+            cododontologo: '16931028 7389'
+        },
+        {
+            fecha: ISODate('2020-03-15T08:30:00'),
+            cododontologo: '16931028 7389'
+        },
+        {
+            fecha: ISODate('2020-03-15T09:00:00'),
+            cododontologo: '16931028 7389'
+        },
+        {
+            fecha: ISODate('2020-03-15T09:30:00'),
+            cododontologo: '16931028 7389'
+        },
+        {
+            fecha: ISODate('2020-03-15T10:00:00'),
+            cododontologo: '16931028 7389'
+        },
+        {
+            fecha: ISODate('2020-03-15T10:30:00'),
+            cododontologo: '16931028 7389'
+        },
+        {
             fecha: ISODate('2020-03-15T11:30:00'),
             cododontologo: '16931028 7389'
-        }
+        },
+        {
+            fecha: ISODate('2020-03-15T12:00:00'),
+            cododontologo: '16931028 7389'
+        },
+        {
+            fecha: ISODate('2020-03-15T12:30:00'),
+            cododontologo: '16931028 7389'
+        },
+        {
+            fecha: ISODate('2020-03-15T13:00:00'),
+            cododontologo: '16931028 7389'
+        },
+        {
+            fecha: ISODate('2020-03-15T13:30:00'),
+            cododontologo: '16931028 7389'
+        },
+        {
+            fecha: ISODate('2020-03-15T13:30:00'),
+            cododontologo: '16931028 7389'
+        },
+        {
+            fecha: ISODate('2020-03-15T14:00:00'),
+            cododontologo: '16931028 7389'
+        },
+        {
+            fecha: ISODate('2020-03-15T14:30:00'),
+            cododontologo: '16931028 7389'
+        },
+        {
+            fecha: ISODate('2020-03-15T07:00:00'),
+            cododontologo: '16010917 0621'
+        },
+        {
+            fecha: ISODate('2020-03-15T07:30:00'),
+            cododontologo: '16010917 0621'
+        },
+        {
+            fecha: ISODate('2020-03-15T08:00:00'),
+            cododontologo: '16010917 0621'
+        },
+        {
+            fecha: ISODate('2020-03-15T08:30:00'),
+            cododontologo: '16010917 0621'
+        },
+        {
+            fecha: ISODate('2020-03-15T09:00:00'),
+            cododontologo: '16010917 0621'
+        },
+        {
+            fecha: ISODate('2020-03-15T09:30:00'),
+            cododontologo: '16010917 0621'
+        },
+        {
+            fecha: ISODate('2020-03-15T10:00:00'),
+            cododontologo: '16010917 0621'
+        },
+        {
+            fecha: ISODate('2020-03-15T10:30:00'),
+            cododontologo: '16010917 0621'
+        },
+        {
+            fecha: ISODate('2020-03-15T11:30:00'),
+            cododontologo: '16010917 0621'
+        },
+        {
+            fecha: ISODate('2020-03-15T12:00:00'),
+            cododontologo: '16010917 0621'
+        },
+        {
+            fecha: ISODate('2020-03-15T12:30:00'),
+            cododontologo: '16010917 0621'
+        },
+        {
+            fecha: ISODate('2020-03-15T13:00:00'),
+            cododontologo: '16010917 0621'
+        },
+        {
+            fecha: ISODate('2020-03-15T13:30:00'),
+            cododontologo: '16010917 0621'
+        },
+        {
+            fecha: ISODate('2020-03-15T13:30:00'),
+            cododontologo: '16010917 0621'
+        },
+        {
+            fecha: ISODate('2020-03-15T14:00:00'),
+            cododontologo: '16010917 0621'
+        },
+        {
+            fecha: ISODate('2020-03-15T14:30:00'),
+            cododontologo: '16010917 0621'
+        },
+        {
+            fecha: ISODate('2020-03-15T07:00:00'),
+            cododontologo: '16240502 9139'
+        },
+        {
+            fecha: ISODate('2020-03-15T07:30:00'),
+            cododontologo: '16240502 9139'
+        },
+        {
+            fecha: ISODate('2020-03-15T08:00:00'),
+            cododontologo: '16240502 9139'
+        },
+        {
+            fecha: ISODate('2020-03-15T08:30:00'),
+            cododontologo: '16240502 9139'
+        },
+        {
+            fecha: ISODate('2020-03-15T09:00:00'),
+            cododontologo: '16240502 9139'
+        },
+        {
+            fecha: ISODate('2020-03-15T09:30:00'),
+            cododontologo: '16240502 9139'
+        },
+        {
+            fecha: ISODate('2020-03-15T10:00:00'),
+            cododontologo: '16240502 9139'
+        },
+        {
+            fecha: ISODate('2020-03-15T10:30:00'),
+            cododontologo: '16240502 9139'
+        },
+        {
+            fecha: ISODate('2020-03-15T11:30:00'),
+            cododontologo: '16240502 9139'
+        },
+        {
+            fecha: ISODate('2020-03-15T12:00:00'),
+            cododontologo: '16240502 9139'
+        },
+        {
+            fecha: ISODate('2020-03-15T12:30:00'),
+            cododontologo: '16240502 9139'
+        },
+        {
+            fecha: ISODate('2020-03-15T13:00:00'),
+            cododontologo: '16240502 9139'
+        },
+        {
+            fecha: ISODate('2020-03-15T13:30:00'),
+            cododontologo: '16240502 9139'
+        },
+        {
+            fecha: ISODate('2020-03-15T13:30:00'),
+            cododontologo: '16240502 9139'
+        },
+        {
+            fecha: ISODate('2020-03-15T14:00:00'),
+            cododontologo: '16240502 9139'
+        },
+        {
+            fecha: ISODate('2020-03-15T14:30:00'),
+            cododontologo: '16240502 9139'
+        },
+        {
+            fecha: ISODate('2020-03-13T07:00:00'),
+            cododontologo: '16080102 2724'
+        },
+        {
+            fecha: ISODate('2020-03-15T07:30:00'),
+            cododontologo: '16080102 2724'
+        },
+        {
+            fecha: ISODate('2020-03-15T08:00:00'),
+            cododontologo: '16080102 2724'
+        },
+        {
+            fecha: ISODate('2020-03-15T08:30:00'),
+            cododontologo: '16080102 2724'
+        },
+        {
+            fecha: ISODate('2020-03-15T09:00:00'),
+            cododontologo: '16080102 2724'
+        },
+        {
+            fecha: ISODate('2020-03-15T09:30:00'),
+            cododontologo: '16080102 2724'
+        },
+        {
+            fecha: ISODate('2020-03-15T10:00:00'),
+            cododontologo: '16080102 2724'
+        },
+        {
+            fecha: ISODate('2020-03-15T10:30:00'),
+            cododontologo: '16080102 2724'
+        },
+        {
+            fecha: ISODate('2020-03-15T11:30:00'),
+            cododontologo: '16080102 2724'
+        },
+        {
+            fecha: ISODate('2020-03-15T12:00:00'),
+            cododontologo: '16080102 2724'
+        },
+        {
+            fecha: ISODate('2020-03-15T12:30:00'),
+            cododontologo: '16080102 2724'
+        },
+        {
+            fecha: ISODate('2020-03-15T13:00:00'),
+            cododontologo: '16080102 2724'
+        },
+        {
+            fecha: ISODate('2020-03-15T13:30:00'),
+            cododontologo: '16080102 2724'
+        },
+        {
+            fecha: ISODate('2020-03-15T13:30:00'),
+            cododontologo: '16080102 2724'
+        },
+        {
+            fecha: ISODate('2020-03-15T14:00:00'),
+            cododontologo: '16080102 2724'
+        },
+        {
+            fecha: ISODate('2020-03-15T14:30:00'),
+            cododontologo: '16080102 2724'
+        },
+        {
+            fecha: ISODate('2020-03-16T07:00:00'),
+            cododontologo: '16300127 5647'
+        },
+        {
+            fecha: ISODate('2020-03-16T07:30:00'),
+            cododontologo: '16300127 5647'
+        },
+        {
+            fecha: ISODate('2020-03-16T08:00:00'),
+            cododontologo: '16300127 5647'
+        },
+        {
+            fecha: ISODate('2020-03-16T08:30:00'),
+            cododontologo: '16300127 5647'
+        },
+        {
+            fecha: ISODate('2020-03-16T09:00:00'),
+            cododontologo: '16300127 5647'
+        },
+        {
+            fecha: ISODate('2020-03-16T09:30:00'),
+            cododontologo: '16300127 5647'
+        },
+        {
+            fecha: ISODate('2020-03-16T10:00:00'),
+            cododontologo: '16300127 5647'
+        },
+        {
+            fecha: ISODate('2020-03-16T10:30:00'),
+            cododontologo: '16300127 5647'
+        },
+        {
+            fecha: ISODate('2020-03-16T11:30:00'),
+            cododontologo: '16300127 5647'
+        },
+        {
+            fecha: ISODate('2020-03-16T12:00:00'),
+            cododontologo: '16300127 5647'
+        },
+        {
+            fecha: ISODate('2020-03-16T12:30:00'),
+            cododontologo: '16300127 5647'
+        },
+        {
+            fecha: ISODate('2020-03-16T13:00:00'),
+            cododontologo: '16300127 5647'
+        },
+        {
+            fecha: ISODate('2020-03-16T13:30:00'),
+            cododontologo: '16300127 5647'
+        },
+        {
+            fecha: ISODate('2020-03-16T13:30:00'),
+            cododontologo: '16300127 5647'
+        },
+        {
+            fecha: ISODate('2020-03-16T14:00:00'),
+            cododontologo: '16300127 5647'
+        },
+        {
+            fecha: ISODate('2020-03-16T14:30:00'),
+            cododontologo: '16300127 5647'
+        },
     ]
 )
 
@@ -356,7 +1437,7 @@ db.reserva.insert(
     [
         {
             codreserva: '600',
-            estado: 'Disponible',
+            estado: 'Se Presento',
             abono: 2500,
             fecha: ISODate('2020-03-13T08:00:00'),
             cododontologo: '16430229 7769',
@@ -386,7 +1467,7 @@ db.reserva.insert(
         },
         {
             codreserva: '602',
-            estado: 'Disponible',
+            estado: 'Se presento',
             abono: 3000,
             fecha: ISODate('2020-03-13T08:30:00'),
             cododontologo: '16430229 7769',
@@ -422,6 +1503,306 @@ db.reserva.insert(
             cododontologo: '16450711 4769',
             paciente: {
                 cedula: 166303036930,
+                nombre: 'Nicolas',
+                apellido: 'Cardenaz',
+                telefono: 7916413,
+                direccion: 'calle 11 #17-22',
+                tipo: 'Contributivo'
+            }
+        },
+	{
+            codreserva: '605',
+            estado: 'Se Presento',
+            abono: 60000,
+            fecha: ISODate('2020-03-13T09:00:00'),
+            cododontologo: '16450711 4769',
+            paciente: {
+                cedula: 267506086,
+                nombre: 'Carlos',
+                apellido: 'Muñoz',
+                telefono: 4539842,
+                direccion: 'calle 17 #10-8',
+                tipo: 'Subsidiado'
+            }
+        },
+	{
+            codreserva: '606',
+            estado: 'Se Presento',
+            abono: 50000,
+            fecha: ISODate('2020-03-15T09:00:00'),
+            cododontologo: '16010917 0621',
+            paciente: {
+                cedula: 166303036,
+                nombre: 'Nicolas',
+                apellido: 'Cardenaz',
+                telefono: 7916413,
+                direccion: 'calle 11 #17-22',
+                tipo: 'Contributivo'
+            }
+        },
+	{
+            codreserva: '607',
+            estado: 'Cancelada',
+            abono: 70000,
+            fecha: ISODate('2020-03-16T13:30:00'),
+            cododontologo: '16300127 5647',
+            paciente: {
+                cedula: 2870746483,
+                nombre: 'Rosita',
+                apellido: 'Alarcon',
+                telefono: 4566642,
+                direccion: 'calle 56 #16-88',
+                tipo: 'Contributivo'
+            }
+        },
+	{
+            codreserva: '608',
+            estado: 'Se Presento',
+            abono: 75000,
+            fecha: ISODate('2020-03-16T13:30:00'),
+            cododontologo: '16300127 5647',
+            paciente: {
+                cedula: 3843943043,
+                nombre: 'Natalia',
+                apellido: 'Rios',
+                telefono: 4457642,
+                direccion: 'calle 23 #16-8',
+                tipo: 'Subsidiado'
+            }
+        },
+	{
+            codreserva: '609',
+            estado: 'No Se Presento',
+            abono: 0,
+            fecha: ISODate('2020-03-13T09:30:00'),
+            cododontologo: '16430229 7769',
+            paciente: {
+                cedula: 4428328342,
+                nombre: 'James',
+                apellido: 'Rodriguez',
+                telefono: 4992323,
+                direccion: 'calle 65 #11-5',
+                tipo: 'Subsidiado'
+            }
+        },
+	{
+            codreserva: '610',
+            estado: 'Se Presento',
+            abono: 60000,
+            fecha: ISODate('2020-03-16T13:30:00'),
+            cododontologo: '16300127 5647',
+            paciente: {
+                cedula: 8737478392,
+                nombre: 'Graciela',
+                apellido: 'Muñoz',
+                telefono: 4223323,
+                direccion: 'calle 38 #1-1',
+                tipo: 'Contributivo'
+            }
+        },
+	{
+            codreserva: '611',
+            estado: 'Se Presento',
+            abono: 40000,
+            fecha: ISODate('2020-03-15T14:30:00'),
+            cododontologo: '16240502 9139',
+            paciente: {
+                cedula: 8843434332,
+                nombre: 'Jenny',
+                apellido: 'Gomez',
+                telefono: 2483823,
+                direccion: 'calle 23 #7-99',
+                tipo: 'Contributivo'
+            }
+        },
+	{
+            codreserva: '612',
+            estado: 'Se Presento',
+            abono: 57000,
+            fecha: ISODate('2020-03-15T09:30:00'),
+            cododontologo: '16240502 9139',
+            paciente: {
+                cedula: 1283843333,
+                nombre: 'Cristiano',
+                apellido: 'Ronaldo',
+                telefono: 4123232,
+                direccion: 'calle 61 #11-18',
+                tipo: 'Contributivo'
+            }
+        },
+	{
+            codreserva: '613',
+            estado: 'Cancelada',
+            abono: 0,
+            fecha: ISODate('2020-03-15T07:30:00'),
+            cododontologo: '16080102 2724',
+            paciente: {
+                cedula: 1212394334,
+                nombre: 'Oivar',
+                apellido: 'Micolta',
+                telefono: 5663232,
+                direccion: 'calle 12 #12-12',
+                tipo: 'Subsidiado'
+            }
+        },
+	{
+            codreserva: '614',
+            estado: 'No Se Presento',
+            abono: 0,
+            fecha: ISODate('2020-03-16T07:30:00'),
+            cododontologo: '16300127 5647',
+            paciente: {
+                cedula: 4428328342,
+                nombre: 'James',
+                apellido: 'Rodriguez',
+                telefono: 4992323,
+                direccion: 'calle 65 #11-5',
+                tipo: 'Subsidiado'
+            }
+        },
+	{
+            codreserva: '615',
+            estado: 'Cancelada',
+            abono: 0,
+            fecha: ISODate('2020-03-15T11:00:00'),
+            cododontologo: '16080102 2724',
+            paciente: {
+                cedula: 2232349439,
+                nombre: 'Camila',
+                apellido: 'Benavides',
+                telefono: 4232423,
+                direccion: 'calle 33 #14-21',
+                tipo: 'Contributivo'
+            }
+        },
+	{
+            codreserva: '616',
+            estado: 'Se Presento',
+            abono: 86000,
+            fecha: ISODate('2020-03-15T11:30:00'),
+            cododontologo: '16931028 7389',
+            paciente: {
+                cedula: 3843943043,
+                nombre: 'Natalia',
+                apellido: 'Rios',
+                telefono: 4457642,
+                direccion: 'calle 23 #16-8',
+                tipo: 'Subsidiado'
+            }
+        },
+	{
+            codreserva: '617',
+            estado: 'Se Presento',
+            abono: 90000,
+            fecha: ISODate('2020-03-15T08:30:00'),
+            cododontologo: '16010917 0621',
+            paciente: {
+                cedula: 7434937984,
+                nombre: 'Oswaldo',
+                apellido: 'Palacios',
+                telefono: 4232434,
+                direccion: 'calle 34 #11-18',
+                tipo: 'Contributivo'
+            }
+        },
+	{
+            codreserva: '618',
+            estado: 'Cancelada',
+            abono: 0,
+            fecha: ISODate('2020-03-13T09:30:00'),
+            cododontologo: '16430229 7769',
+            paciente: {
+                cedula: 5492394323,
+                nombre: 'Miller',
+                apellido: 'Muñoz',
+                telefono: 4447744,
+                direccion: 'calle 67 #16-38',
+                tipo: 'Contributivo'
+            }
+        },
+	{
+            codreserva: '619',
+            estado: 'No Se Presento',
+            abono: 0,
+            fecha: ISODate('2020-03-13T14:00:00'),
+            cododontologo: '16270208 8275',
+            paciente: {
+                cedula: 3843943043,
+                nombre: 'Natalia',
+                apellido: 'Rios',
+                telefono: 4457642,
+                direccion: 'calle 23 #16-8',
+                tipo: 'Subsidiado'
+            }
+        },
+	{
+            codreserva: '620',
+            estado: 'Cancelada',
+            abono: 0,
+            fecha: ISODate('2020-03-15T10:30:00'),
+            cododontologo: '16080102 2724',
+            paciente: {
+                cedula: 1284842340,
+                nombre: 'Manuela',
+                apellido: 'Garcia',
+                telefono: 4873823,
+                direccion: 'calle 12 #16-38',
+                tipo: 'Subsidiado'
+            }
+        },
+	{
+            codreserva: '621',
+            estado: 'Se Presento',
+            abono: 70000,
+            fecha: ISODate('2020-03-15T09:30:00'),
+            cododontologo: '16240502 9139',
+            paciente: {
+                cedula: 3348388923,
+                nombre: 'Lionel',
+                apellido: 'Messi',
+                telefono: 4442322,
+                direccion: 'calle 1 #6-3',
+                tipo: 'Subsidiado'
+            }
+        },
+	{
+            codreserva: '622',
+            estado: 'Se Presento',
+            abono: 70000,
+            fecha: ISODate('2020-03-15T08:30:00'),
+            cododontologo: '16240502 9139',
+            paciente: {
+                cedula: 3293287498,
+                nombre: 'Adriana',
+                apellido: 'Marin',
+                telefono: 4671271,
+                direccion: 'calle 13 #41-25',
+                tipo: 'Subsidiado'
+            }
+        },
+	{
+            codreserva: '623',
+            estado: 'No Se Presento',
+            abono: 0,
+            fecha: ISODate('2020-03-16T10:00:00'),
+            cododontologo: '16300127 5647',
+            paciente: {
+                cedula: 166303036930,
+                nombre: 'Nicolas',
+                apellido: 'Cardenaz',
+                telefono: 7916413,
+                direccion: 'calle 11 #17-22',
+                tipo: 'Contributivo'
+            }
+        },
+	{
+            codreserva: '624',
+            estado: 'Cancelada',
+            abono: 0,
+            fecha: ISODate('2020-03-16T09:30:00'),
+            cododontologo: '16300127 5647',
+            paciente: {
+                cedula: 166303036,
                 nombre: 'Nicolas',
                 apellido: 'Cardenaz',
                 telefono: 7916413,
